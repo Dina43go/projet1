@@ -164,8 +164,8 @@ footer {
 }
 
 footer .foot1 {
-  color: rgba(255, 255, 255, 0.932);
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.822);
+  font-weight: 600;
   margin-top: 5px;
   margin-bottom: 1em;
   text-align: center;
@@ -199,13 +199,14 @@ footer .foot3 {
 
 footer .foot3 .links div {
   color: rgba(255, 255, 255, 0.589);
+  font-weight: 600;
 }
 
 footer .foot3 .links div ul {
   margin: 8px;
   position: relative;
-  color: rgba(255, 255, 255, 0.897);
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
   left: 2em;
-  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */
