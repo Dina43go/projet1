@@ -4,13 +4,13 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Roboto", "Courier New", Courier, monospace;
+  font-family: "Roboto", "Arial", Courier, monospace;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  height: 105px;
+  height: min-content;
 }
 
 header .menu {
@@ -73,18 +73,26 @@ header .menu {
 
 .section2 {
   flex-direction: column;
-  .contenu1 {
-    padding: 1.5em 6em;
+  .wrapp {
+    display: flex;
+    justify-content: center;
+  }
+  .wrapp .contenu1 {
+    padding: 1.5em 0em;
+    max-width: 55%;
     font-size: 1.5em;
     text-align: center;
   }
   .contenu2 {
-    margin: 0px 20%;
+    // margin: 0px 20%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .cards {
       padding: 1em;
       margin: 0px 15px;
+      width: 244px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -100,11 +108,18 @@ header .menu {
       }
     }
   }
-  .info {
-    font-size: 20px;
-    padding: 1.5em 14em;
-    text-align: center;
+  .contenu3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .info {
+      font-size: 20px;
+      padding: 1.5em 0em;
+      width: 50%;
+      text-align: center;
+    }
   }
+
   div {
     text-align: center;
   }
@@ -144,9 +159,39 @@ footer {
     .links div ul {
       margin: 8px;
       position: relative;
-      color: rgba(255, 255, 255, 0.82);
       font-weight: 600;
       left: 2em;
+      width: max-content;
+    }
+    .links div ul li a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
     }
   }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+  }
+
+  .header {
+    border: 2px solid blue;
+  }
+
+  header .logo_ img {
+    width: 100%;
+  }
+  .section2 {
+    .wrapp .contenu1 {
+      max-width: 80%;
+    }
+    .contenu3 .info {
+      width: 80%;
+    }
+  }
+  footer .foot3 {
+    flex-direction: column;
+    margin: 0px;
+  }
+
 }
